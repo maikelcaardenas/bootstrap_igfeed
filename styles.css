@@ -1,0 +1,36 @@
+.img-size {
+    width: 33% !important;
+    height: 380px;
+}
+button.nav-link:focus .home-svg,
+button.nav-link.active .home-svg {
+    fill: blue;
+}
+
+button.nav-link:focus + button.nav-link .home-svg,
+button.nav-link.active + button.nav-link .home-svg {
+    fill: gray;
+}
+
+button.nav-link:focus .profile-svg,
+button.nav-link.active .profile-svg {
+    fill: blue;
+}
+
+button.nav-link:focus + button.nav-link .profile-svg,
+button.nav-link.active + button.nav-link .profile-svg {
+    fill: gray;
+} 
+
+.nav-link {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.home-svg, .profile-svg {
+    width: 20px;
+    height: 20px;
+    fill: gray;
+}

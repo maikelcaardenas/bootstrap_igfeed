@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="font-family:  'Oleo Script', cursive;
+            font-size: 25px;" href="#"> <svg style="width: 50px; height: 50px;" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512">
+                    <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg> Instagram</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a new
+                    Post</button>
+                <!-- DROPDOWN -->
+                <form class="d-flex" role="search">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mx-2" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"> <svg style="width: 20px; height: 20px; fill: white;"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item border-3 link-active" style="color: red;" href="#">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Caption: </label>
+                            <textarea class="form-control" id="message-text"
+                                placeholder="Add the caption of your post here"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-outline-secondary"><svg style="width: 20px; height: 20px;"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" />
+                            </svg></button>
+                        <button type="button" class="btn btn-outline-secondary">
+                            <svg style="height: 20px; width: 20px;" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 384 512">
+                                <path
+                                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navtab -->
+  <nav>
+    <div class="nav nav-tabs justify-content-center navtab-divider" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+            <svg class="home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm88 64v64H64V96h88zm56 0h88v64H208V96zm240 0v64H360V96h88zM64 224h88v64H64V224zm232 0v64H208V224h88zm64 0h88v64H360V224zM152 352v64H64V352h88zm56 0h88v64H208V352zm240 0v64H360V352h88z"/>
+            </svg>
+        </button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+            <svg class="profile-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+
+
+    <!-- Cuadricles -->
+    <div class="tab-content mb-4" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+            tabindex="0">
+            <div class="container pt-2">
+                <div class="row row-cols-3" style="gap: 3px;">
+                    <div class="col p-0 img-size">
+                        <img class="h-100 w-100 object-fit-cover"
+                            src="https://www.travelassociates.com/sites/v2.travel-associates.com.au/files/fcl-blog/Hawaii-kauai.jpg"
+                            alt="hawaii">
+                    </div>
+                    <div class="col p-0 img-size">
+                        <img class="h-100 w-100 object-fit-cover"
+                            src="https://nationwideautotransportation.com/blog/wp-content/uploads/2023/01/shutterstock_123459430.jpg"
+                            alt="dancers">
+                    </div>
+                    <div class="col p-0 img-size">
+                        <img class="h-100 w-100 object-fit-cover"
+                            src="https://www.pinkertloratta.com/wp-content/uploads/2023/03/Four-Seasons-Resort-Hualalai-3.jpg"
+                            alt="surf">
+                    </div>
+                    <div class="col p-0 img-size">
+                        <img class="h-100 w-100 object-fit-cover"
+                            src="https://everydayrunaway.com/wp-content/uploads/2017/02/Big-island-Hawaii-Travel-Guide-700x600.png"
+                            alt="beach-view">
+                    </div>
+                    <div class="col p-0 img-size">
+                        <img class="h-100 w-100 object-fit-cover"
+                            src="https://ninaoutandabout.ca/wp-content/uploads/2022/07/hammock-hawaii-waterfall.jpg"
+                            alt="model">
+                    </div>
+                    <div class="col p-0 img-size">
+                        <img class="h-100 w-100 object-fit-cover"
+                            src="https://cdn.musebycl.io/2021-04/Kona%20Brewing%20Co.%20%7C%20Bullpen%20Phone2.jpg"
+                            alt="beerguys">
+                    </div>
+                    <div class="col p-0 img-size">
+                        <img class="h-100 w-100 object-fit-cover"
+                            src="https://www.visitoostende.be/sites/default/files/styles/hero_detail_page/public/externals/9abbf59986b5c972a4b22333d87c41fc.jpg?itok=ZwLMz68w"
+                            alt="poke-rest">
+                    </div>
+                    <div class="col p-0 img-size">
+                        <img class="h-100 w-100 object-fit-cover"
+                            src="https://lushpalm.com/wp-content/uploads/2017/10/north-shore-surf-competition-vans-world-cup-surfing.jpg"
+                            alt="surf-contest">
+                    </div>
+                    <div class="col p-0 img-size">
+                        <img class="h-100 w-100 object-fit-cover"
+                            src="https://lp-cms-production.imgix.net/2021-04/GettyRF_483100479.jpg?auto=compress&fit=crop&format=auto&q=50&w=1200&h=800"
+                            alt="surf-practice">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="tab-content mb-4" id="nav-tabContent2">
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div class="d-flex align-items-center flex-column">              
+                <div class="card mt-5" style="width: 33rem;">
+                    <div class="d-flex justify-content-between p-2">
+                        <h4>First hawaii view</h4>
+                        <p>27/04</p>
+                    </div>
+                    <img src="https://www.travelassociates.com/sites/v2.travel-associates.com.au/files/fcl-blog/Hawaii-kauai.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body ">
+                        <p class="p-0"><strong>204 likes</strong></p>
+                        <p class="">One of the most greatest view i have ever seen.</p>
+                    </div>
+                </div>
+                <div class="card mt-5" style="width: 33rem; margin: 0 auto;">
+                    <div class="d-flex justify-content-between p-2">
+                        <h4>Sunset with hawaian people</h4>
+                        <p>28/04</p>
+                    </div>
+                    <img src="https://nationwideautotransportation.com/blog/wp-content/uploads/2023/01/shutterstock_123459430.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body ">
+                        <p class="p-0"><strong>385 likes</strong></p>
+                        <p class="">when the suns goes down those guys prepair his show with fire and surprises</p>
+                    </div>
+                </div>
+                <div class="card mt-5" style="width: 33rem; margin: 0 auto;">
+                    <div class="d-flex justify-content-between p-2">
+                        <h4>Golden hour surf</h4>
+                        <p>29/04</p>
+                    </div>
+                    <img src="https://www.pinkertloratta.com/wp-content/uploads/2023/03/Four-Seasons-Resort-Hualalai-3.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body ">
+                        <p class="p-0"><strong>560 likes</strong></p>
+                        <p class="">Practice surf in this moment of the day is one of the most incredible experiences in
+                            the
+                            hole
+                            world</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
